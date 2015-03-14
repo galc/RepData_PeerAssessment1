@@ -1,5 +1,4 @@
 # Reproducible Research: Peer Assessment 1
-Gal Haim Cohen  
 
 #### Loading the data
 
@@ -75,7 +74,7 @@ library(ggplot2)
 ggplot(avgstepsperinterval) + aes(x=interval, y=steps) + geom_line() + labs(title="Time Series Plot of Average number of steps per interval")
 ```
 
-![](./PA1_template_files/figure-html/timeseries-1.png) 
+![](./PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
 
 ```r
 # Determine which interval contains the maximum number of steps
@@ -130,7 +129,7 @@ names(stepsperday) <- "steps"
 barplot(stepsperday$steps, names.arg = stepsperday$date, xlab = "date", ylab = "steps")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-8-1.png) 
+![](./PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
 
 ##### 4.2 Recalculating mean/median after filling NA data with mean for the 5-minutes interval
 
@@ -206,4 +205,4 @@ avgsteps.merged <- rbind(avgsteps.weekday, avgsteps.weekend)
 ggplot(avgsteps.merged) + aes(x=interval, y=steps) + facet_grid(daytype ~ .) + geom_line() + labs(title="Average Steps / Interval: Weekday vs. Weekend", y="Number of steps")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-14-1.png) 
+![](./PA1_template_files/figure-html/unnamed-chunk-15-1.png) 

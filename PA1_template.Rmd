@@ -49,7 +49,7 @@ barplot(stepsperday$steps, names.arg = stepsperday$date, xlab = "date", ylab = "
 ```
 
 ### What is the average daily activity pattern?
-```{r timeseries}
+```{r }
 # Create a data frame containing the mean number of steps for each interval
 avgstepsperinterval <- data.frame(tapply(activity$steps, activity$interval, mean, na.rm=TRUE))
 
